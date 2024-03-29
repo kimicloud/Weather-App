@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather.io</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-blue-200 flex flex-col items-center justify-center">
+  <div class="w-screen">
+    <div class="container mx-auto flex flex-col items-center justify-center">
+      <h1 class="font-bold text-4xl p-2 mt-10">Weather.io</h1>
+    </div>
+    <div class="container mx-auto p-4 mt-5">
+      <form id="weatherForm" class="search-area mb-8 flex flex-col items-center justify-center">
+        <div class="relative">
+          <input
+            type="text"
+            id="weatherInput"
+            placeholder="Enter city"
+            class="peer block w-full px-3 py-2 bg-transparent text-xl border-b-2 border-gray-800 focus:outline-none focus:border-blue-500"
+          />
+        </div>
+        <div class="m-5">
+          <button
+            type="submit"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            id="btn"
+          >
+            Get weather
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="weather-display hidden">
+      <div class="bg-white rounded-lg p-6 shadow-lg">
+        <div id="city"></div>
+        <div id="temperature"></div>
+        <div id="humidity"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
